@@ -25,10 +25,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
-
 ol, ul {
   list-style: none;
 }
@@ -60,10 +56,12 @@ html {
 body {
   padding-top: 150px;
   font-family: "Raleway", sans-serif;
+  line-height: 1.4;
 }
 
 body a, body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Inconsolata", monospace;
+  font-family: "Laila", serif;
+  letter-spacing: -1px;
 }
 
 body a {
@@ -115,7 +113,7 @@ body a {
 }
 
 .heading h2 {
-  font-size: 40px;
+  font-size: 32px;
   margin-bottom: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -185,7 +183,7 @@ header.sticky {
   transition: all .3s;
   -webkit-box-shadow: 1px 1px 2px #ccc;
           box-shadow: 1px 1px 2px #ccc;
-  top: -100px;
+  top: -105px;
 }
 
 header .top-header {
@@ -269,15 +267,24 @@ header .navigation ul li {
 
 header .navigation ul li a {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #555;
   padding: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 header .navigation ul li a.active {
   background: #D1A563;
   color: #fff;
+}
+
+header .navigation ul li a:hover {
+  background: #0A0A0A;
+  color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .header-sm {
@@ -387,6 +394,10 @@ header .navigation ul li a.active {
 
 .banner img {
   width: 100%;
+}
+
+.banner img.sm {
+  display: none;
 }
 
 .banner .img-left {
@@ -584,7 +595,7 @@ header .navigation ul li a.active {
   color: #0A0A0A;
   font-size: 30px;
   font-weight: 600;
-  font-family: "Inconsolata", monospace;
+  font-family: "Laila", serif;
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: 800;
@@ -673,7 +684,7 @@ header .navigation ul li a.active {
 
 .about-us-sec .about-info .img img.front {
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 0;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
@@ -702,13 +713,26 @@ header .navigation ul li a.active {
   padding: 80px 0;
 }
 
-.about-page .about-sec .industry-info p {
-  max-width: 700px;
-  font-size: 18px;
-  line-height: 1.5;
+.about-page .about-sec .industry-info .info-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-page .about-sec .industry-info .info-sec p {
+  width: 60%;
+  padding-right: 60px;
+  font-size: 24px;
+  line-height: 1.6;
   letter-spacing: 1px;
-  margin: 0 auto;
-  text-align: center;
+  text-align: justify;
+}
+
+.about-page .about-sec .industry-info .info-sec img {
+  width: 40%;
 }
 
 .about-page .about-sec .about-company {
@@ -797,13 +821,101 @@ header .navigation ul li a.active {
 
 .banner-sm h1 {
   color: #fff;
-  font-size: 45px;
+  font-size: 40px;
   text-transform: uppercase;
   font-weight: 800;
 }
 
+.manufacturing .banner-sm {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/manufacturing_bg.jpg") no-repeat fixed center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/manufacturing_bg.jpg") no-repeat fixed center center/cover;
+}
+
+.manufacturing .process {
+  padding: 80px 0;
+}
+
+.manufacturing .process p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 50px;
+}
+
+.manufacturing .process img {
+  width: 100%;
+}
+
+.manufacturing .manufacturing-facilities {
+  padding: 80px 0;
+  background: #f8f6ee;
+}
+
+.manufacturing .manufacturing-facilities.alt {
+  background: #fff;
+}
+
+.manufacturing .manufacturing-facilities.alt .facility {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.manufacturing .manufacturing-facilities.alt .facility .img {
+  padding-left: 0;
+  padding-right: 50px;
+}
+
+.manufacturing .manufacturing-facilities .facility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.manufacturing .manufacturing-facilities .facility .content {
+  width: 55%;
+}
+
+.manufacturing .manufacturing-facilities .facility .content h4 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.manufacturing .manufacturing-facilities .facility .content p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 50px;
+}
+
+.manufacturing .manufacturing-facilities .facility .content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.manufacturing .manufacturing-facilities .facility .content ul li {
+  padding: 8px 0;
+}
+
+.manufacturing .manufacturing-facilities .facility .img {
+  padding-left: 50px;
+  width: 45%;
+}
+
+.manufacturing .manufacturing-facilities .facility .img img {
+  width: 100%;
+}
+
 .products {
   overflow: hidden;
+}
+
+.products .product-listing {
+  padding: 100px 0;
 }
 
 .products .product-listing.alt {
@@ -833,17 +945,15 @@ header .navigation ul li a.active {
 }
 
 .products .product-listing.alt .product .image img.front {
-  position: absolute;
-  left: 12.5%;
-  top: 0px;
-  width: 75%;
+  position: relative;
+  left: 15%;
+  width: 70%;
 }
 
 .products .product-listing .product {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 100px 0 100px;
 }
 
 .products .product-listing .product .details {
@@ -869,7 +979,7 @@ header .navigation ul li a.active {
 }
 
 .products .product-listing .product .details .ingredients h4 {
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 40px;
 }
 
@@ -904,13 +1014,13 @@ header .navigation ul li a.active {
           transform: scale(0.6);
   -webkit-transition: all .7s;
   transition: all .7s;
+  opacity: 0;
 }
 
 .products .product-listing .product .image:hover img.back {
   opacity: 1;
   -webkit-transform: scale(1) rotate(0);
           transform: scale(1) rotate(0);
-  margin-left: 7.5%;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -923,17 +1033,21 @@ header .navigation ul li a.active {
   transition: all .7s;
   width: 85%;
   margin-top: 100px;
+  position: absolute;
+  left: 7.5%;
+  top: 0;
 }
 
 .products .product-listing .product .image img.front {
-  position: absolute;
-  right: 12.5%;
+  position: relative;
+  right: -15%;
   top: 0px;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all .7s;
   transition: all .7s;
-  width: 75%;
+  width: 70%;
+  opacity: 1;
 }
 
 .contact-page .contact-form {
@@ -991,7 +1105,7 @@ header .navigation ul li a.active {
 }
 
 .contact-page .contact-form .contact-details .item h4 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -1190,6 +1304,56 @@ footer .social ul li a:hover {
     font-size: 14px;
     margin-top: 14px;
   }
+  .about-page .about-sec .industry-info .info-sec p {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-right: 20px;
+  }
+  .about-page .about-sec .about-company .about-info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about-page .about-sec .about-company .about-info .history {
+    width: 100%;
+    padding-right: 0;
+  }
+  .about-page .about-sec .about-company .about-info .history ul {
+    padding-left: 20px;
+  }
+  .about-page .about-sec .about-company .about-info .key-highlights {
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 60px;
+  }
+  .heading h2 {
+    font-size: 27px;
+  }
+  .products .product-listing .product {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .products .product-listing.alt .product {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .products .product-listing .product .image {
+    margin-bottom: 60px;
+    width: 100%;
+  }
+  .products .product-listing .product .details {
+    padding-right: 0;
+    width: 100%;
+  }
+  .products .product-listing.alt .product .details {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1252,6 +1416,36 @@ footer .social ul li a:hover {
   .contact-page .contact-sec form {
     width: 100%;
     margin-top: 50px;
+  }
+  .parallax-section {
+    background: url("../images/parallax_mb.jpg") no-repeat fixed center center/cover;
+    height: 500px;
+  }
+  .heading h2 {
+    font-size: 22px;
+  }
+  .about-page .about-sec .industry-info .info-sec {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about-page .about-sec .industry-info .info-sec p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .about-page .about-sec .industry-info .info-sec img {
+    width: 100%;
+  }
+  .countries ul li {
+    padding: 10px 10px;
+  }
+  .banner img {
+    display: none;
+  }
+  .banner img.sm {
+    display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */

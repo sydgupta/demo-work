@@ -25,10 +25,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
-
 ol, ul {
   list-style: none;
 }
@@ -64,9 +60,11 @@ table {
 // }
 
 $primary: #D1A563;
+$primary-light: #f8f6ee;
 $secondary: #0A0A0A;
 $font-primary: 'Raleway', sans-serif;
-$font-secondary: 'Inconsolata', monospace;;
+// $font-secondary: 'Inconsolata', monospace;
+$font-secondary: 'Laila', serif;
 
 html{
     scroll-behavior: smooth;
@@ -74,13 +72,15 @@ html{
 
 body{
   padding-top: 150px;
-    font-family: $font-primary;
-    a, h1, h2, h3, h4, h5, h6{
-        font-family: $font-secondary;
-    }
-    a{
-        text-decoration: none;
-    }
+  font-family: $font-primary;
+  line-height: 1.4;
+  a, h1, h2, h3, h4, h5, h6{
+      font-family: $font-secondary;
+      letter-spacing: -1px;
+  }
+  a{
+      text-decoration: none;
+  }
 }
 
 .mt-30 {
@@ -117,7 +117,7 @@ body{
   align-items: center;
   margin-bottom: 50px;
   h2{
-    font-size: 40px;
+    font-size: 32px;
     margin-bottom: 10px;
     font-weight: 800;
     text-transform: uppercase;
@@ -178,7 +178,7 @@ header{
     &.sticky{
       transition: all .3s;
       box-shadow: 1px 1px 2px #ccc;
-      top: -100px;
+      top: -105px;
       // .top-header{
       //   height: 0;
       //   padding: 0;
@@ -231,7 +231,7 @@ header{
     .navigation{
         padding: 0 15px;
         text-align: center;
-        background: #f8f6ee;
+        background: $primary-light;
         ul{
             list-style-type: none;
             padding-left: 0;
@@ -240,13 +240,19 @@ header{
                 display: inline-block;
                 a{
                     display: block;
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: 600;
                     color: #555;
                     padding: 20px;
+                    transition: all .3s;
                     &.active{
                       background: $primary;
                       color: #fff;
+                    }
+                    &:hover{
+                      background: $secondary;
+                      color: #fff;
+                      transition: all .3s;
                     }
                 }
             }
@@ -342,6 +348,9 @@ header{
   overflow: hidden;
   img{
     width: 100%;
+    &.sm{
+      display: none;
+    }
   }
   .img-left{
     width: 200px;
@@ -547,7 +556,7 @@ header{
         }
         &.front{
           position: absolute;
-          top: 10%;
+          top: 0;
           left: 0;
           transform: rotate(30deg);
           z-index: 2;
@@ -575,20 +584,27 @@ header{
   .about-sec{
     .industry-info{
       padding: 80px 0;
-      p{
-        max-width: 700px;
-        font-size: 18px;
-        line-height: 1.5;
-        letter-spacing: 1px;
-        margin: 0 auto;
-        text-align: center;
+      .info-sec{
+        display: flex;
+        align-items: center;
+        p{
+          width: 60%;
+          padding-right: 60px;
+          font-size: 24px;
+          line-height: 1.6;
+          letter-spacing: 1px;
+          text-align: justify;
+        }
+        img{
+          width: 40%;
+        }
       }
     }
 
     .about-company{
       line-height: 1.4;
       padding: 80px 0;
-      background: #f8f6ee;
+      background: $primary-light;
       .about-info{
         display: flex;
         ul{
@@ -644,17 +660,83 @@ header{
   align-items: center;
   h1{
     color: #fff;
-    font-size: 45px;
+    font-size: 40px;
     text-transform: uppercase;
     font-weight: 800;
+  }
+}
+
+.manufacturing{
+  .banner-sm{
+    background: linear-gradient(rgba(#000, .5), rgba(#000, .5)) , url('../images/manufacturing_bg.jpg') no-repeat fixed center center / cover;
+  }
+
+  .process{
+    padding: 80px 0;
+    p{
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.4;
+      margin-bottom: 50px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  
+  .manufacturing-facilities{
+    padding: 80px 0;
+    background: $primary-light;
+    &.alt{
+      background: #fff;
+      .facility{
+        flex-direction: row-reverse;
+        .img{
+          padding-left: 0;
+          padding-right: 50px;
+        }
+      }
+    }
+    .facility{
+      display: flex;
+      align-items: center;
+      .content{
+        width: 55%;
+        h4{
+          font-size: 20px;
+          margin-bottom: 30px;
+          font-weight: 800;
+        }
+        p{
+          font-size: 18px;
+          line-height: 1.4;
+          margin-bottom: 50px;
+        }
+        ul{
+          list-style-type: disc;
+          padding-left: 20px;
+          li{
+            padding: 8px 0;
+          }
+        }
+      }
+      .img{
+        padding-left: 50px;
+        width: 45%;
+        img{
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
 .products{
   overflow: hidden;
   .product-listing{
+    padding: 100px 0;
     &.alt{
-      background: #f8f6ee;
+      background: $primary-light;
       .product{
         flex-direction: row-reverse;
         .details{
@@ -671,10 +753,9 @@ header{
           }
           img{
             &.front{
-              position: absolute;
-              left: 12.5%;
-              top: 0px;
-              width: 75%;
+              position: relative;
+              left: 15%;
+              width: 70%;
             }
           }
         }
@@ -682,7 +763,6 @@ header{
     }
     .product{
       display: flex;
-      padding: 100px 0 100px;
       .details{
         padding-right: 50px;
         width: 50%;
@@ -700,7 +780,7 @@ header{
         .ingredients{
           padding-top: 40px;
           h4{
-            font-size: 25px;
+            font-size: 20px;
             margin-bottom: 40px;
           }
           ul{
@@ -726,11 +806,11 @@ header{
             right: -120%;
             transform: scale(0.6);
             transition: all .7s;
+            opacity: 0;
           }
           img.back{
             opacity: 1;
             transform: scale(1) rotate(0);
-            margin-left: 7.5%;
             transition: all 1s;
           }
         }
@@ -741,14 +821,18 @@ header{
             transition: all .7s;
             width: 85%;
             margin-top: 100px;
+            position: absolute;
+            left: 7.5%;
+            top: 0;
           }
           &.front{
-            position: absolute;
-            right: 12.5%;
+            position: relative;
+            right: -15%;
             top: 0px;
             transform: scale(1);
             transition: all .7s;
-            width: 75%;
+            width: 70%;
+            opacity: 1;
           }
         }
       }
@@ -758,7 +842,7 @@ header{
 
 .contact-page{
   .contact-form{
-    background: #f8f6ee;
+    background: $primary-light;
     padding: 100px 0;
     form{
       width: 55%;
@@ -800,7 +884,7 @@ header{
       .item{
         margin-bottom: 30px;
         h4{
-          font-size: 22px;
+          font-size: 20px;
           font-weight: 700;
           margin-bottom: 5px;
         }
@@ -962,6 +1046,48 @@ footer{
     font-size: 14px;
     margin-top: 14px;
   }
+  .about-page .about-sec .industry-info .info-sec p {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-right: 20px;
+  }
+  .about-page .about-sec .about-company .about-info{
+    flex-wrap: wrap;
+  }
+  .about-page .about-sec .about-company .about-info .history {
+    width: 100%;
+    padding-right: 0;
+    ul{
+      padding-left: 20px;
+    }
+  }
+  .about-page .about-sec .about-company .about-info .key-highlights {
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 60px;
+  }
+  .heading h2 {
+    font-size: 27px;
+  }
+  .products .product-listing .product {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .products .product-listing.alt .product {
+    flex-direction: column-reverse;
+  }
+  .products .product-listing .product .image {
+    margin-bottom: 60px;
+    width: 100%;
+  }
+  .products .product-listing .product .details {
+    padding-right: 0;
+    width: 100%;
+  }
+  .products .product-listing.alt .product .details {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 @media(max-width: 600px){
@@ -1019,6 +1145,37 @@ footer{
       form{
         width: 100%;
         margin-top: 50px;
+      }
+    }
+  }
+  .parallax-section{
+    background: url('../images/parallax_mb.jpg') no-repeat fixed center center / cover;
+    height: 500px;
+  }
+  .heading h2 {
+    font-size: 22px;
+  }
+  .about-page .about-sec .industry-info .info-sec {
+    flex-wrap: wrap;
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      padding-right: 0;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  .countries ul li {
+    padding: 10px 10px;
+  }
+  .banner{
+    img{
+      display: none;
+      &.sm{
+        display: block;
       }
     }
   }
