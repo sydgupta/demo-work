@@ -490,6 +490,10 @@ header .navigation ul li a:hover {
   margin-top: 25px;
 }
 
+.icon-section .block .hovicon img {
+  width: 65%;
+}
+
 .icon-section .block .hovicon:after {
   pointer-events: none;
   position: absolute;
