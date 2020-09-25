@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -37,6 +38,24 @@
             </div>
         </div>
     </header>
+
+    <div class="header-sm">
+        <div class="bars"><i class="fa fa-bars"></i></div>
+        <div class="logo"><img src="./assets/images/logo.png" alt=""></div>
+        <div class="search"><i class="fa fa-search"></i></div>
+    </div>
+
+    <div class="sidenav">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Impact</a></li>
+            <li><a href="#">R & D</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
 
     <section class="banner">
         <div class="main-container">
@@ -168,10 +187,205 @@
         </div>
     </section>
 
-    <footer>
+    <section class="mission-support">
+        <img src="./assets/images/mission-bg.png" class="overlay-img" alt="">
         <div class="main-container">
-            
+            <div class="content">
+                <div class="data">
+                    <h2>Our Mission is Supported By</h2>
+
+                    <div class="images">
+                        <img src="./assets/images/iit-delhi.png" alt="">
+                        <img src="./assets/images/niti.png" alt="">
+                        <img src="./assets/images/iim.png" alt="">
+                        <img src="./assets/images/msme.png" alt="">
+                        <img src="./assets/images/gov.png" alt="">
+                    </div>
+                </div>
+                <div class="img">
+                    <p>Thanks to Hon’ble President of India
+                        for Acknowledging our work</p>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/lFreJdJRs_Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h5>#IndiaInnovates</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="media">
+        <div class="main-container">
+            <div class="content">
+                <div class="data">
+                    <h2>Media</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rerum corrupti</p>
+                    <div class="images">
+                        <div class="img-div">
+                            <img src="./assets/images/ht.png" alt="">
+                        </div>
+                        <div class="img-div">
+                            <img src="./assets/images/toi.png" alt="">
+                        </div>
+                        <div class="img-div">
+                            <img src="./assets/images/db.png" alt="">
+                        </div>
+                        <div class="img-div">
+                            <img src="./assets/images/et.png" alt="">
+                        </div>
+                    </div>
+                    <button class="btn-dflt">KNOW MORE</button>
+                </div>
+
+                <div class="img">
+                    <img src="./assets/images/news-cut.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-container">
+        <div class="products">
+            <img src="./assets/images/leaf-left.png" class="leaf-left" alt="">
+            <img src="./assets/images/leaf-right.png" class="leaf-right" alt="">
+            <div class="main-container">
+                <h2>Order Now</h2>
+                <div class="products-list">
+                    <div class="product">
+                        <div class="img">
+                            <img src="./assets/images/product.png" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="name">Single Pack</div>
+                            <div class="price">RS. 300/-</div>
+                            <div class="offer-price">RS. 298/-</div>
+                            <button class="btn-dflt">Buy Now</button>
+                        </div>
+                    </div>
+    
+                    <div class="product">
+                        <div class="img">
+                            <img src="./assets/images/product2.png" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="name">Pack Of Two</div>
+                            <div class="price">RS. 600/-</div>
+                            <div class="offer-price">RS. 590/-</div>
+                            <button class="btn-dflt">Buy Now</button>
+                        </div>
+                    </div>
+    
+                    <div class="product">
+                        <div class="img">
+                            <img src="./assets/images/product4.png" alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="name">Pack of Four</div>
+                            <div class="price">RS. 1200/-</div>
+                            <div class="offer-price">RS. 1150/-</div>
+                            <button class="btn-dflt">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-handle">
+            <div class="main-container">
+                <div class="handle-list">
+                    <div class="single-handle news">
+                        <div class="icon"><i class="fa fa-newspaper-o"></i></div>
+                        <div class="frame"></div>
+                    </div>
+                    <div class="single-handle fb">
+                        <div class="icon"><i class="fa fa-facebook"></i></div>
+                        <div class="frame"></div>
+                    </div>
+                    <div class="single-handle twitter">
+                        <div class="icon"><i class="fa fa-twitter"></i></div>
+                        <div class="frame"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="./assets/images/footer-bg.png" alt="" class="bg-img">
+        <div class="main-container">
+            <div class="footer-content">
+                <div class="left-sec">
+                    <div class="logo">
+                        <img src="./assets/images/logo.png" alt="">
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Info</h3>
+                        <div class="contact-details">
+                            <img src="./assets/images/headphone.png" alt="">
+                            <div>
+                                <h5>Support 24/7</h5>
+                                <h4>0123456789</h4>
+                            </div>
+                        </div>
+                        <div class="social">
+                            <a href="#"><img src="./assets/images/twitter.png" alt=""></a>
+                            <a href="#"><img src="./assets/images/fb.png" alt=""></a>
+                            <a href="#"><img src="./assets/images/insta.png" alt=""></a>
+                            <a href="#"><img src="./assets/images/yt.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-sec">
+                    <div class="quick-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Impact</a></li>
+                            <li><a href="#">R & D</a></li>
+                            <li><a href="#">Media</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-links">
+                        <h3>Products</h3>
+                        <ul>
+                            <li><a href="#">Waterless Shampoo</a></li>
+                            <li><a href="#">Waterless Body Bath</a></li>
+                            <li><a href="#">Covid-19 Protection Lotion</a></li>
+                            <li><a href="#">Waterless Hand Rub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div class="text">
+                    &copy; Copyright 2020
+                </div>
+                <div class="newsletter">
+                    <div class="label">
+                        <span>Newsletter Subscribe</span>
+                    </div>
+                    <form action="">
+                        <input type="text" placeholder="your email address">
+                        <button><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        $(document).ready(function(){
+            setTimeout((function(){
+                $('.info1').addClass('animation1');
+                $('.info2').addClass('animation2');
+                $('.info3').addClass('animation3');
+            }), 1000);
+        });
+    </script>
 </body>
 </html>
