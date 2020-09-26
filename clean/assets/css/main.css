@@ -290,8 +290,8 @@ header .navigation ul li a {
   right: -100px;
   top: 395px;
   opacity: 0;
-  -webkit-animation: mymove1 1s ease-in;
-          animation: mymove1 1s ease-in;
+  -webkit-animation: mymove1 1.5s linear;
+          animation: mymove1 1.5s linear;
 }
 
 .banner .circles .info.info1.animation1 {
@@ -304,8 +304,8 @@ header .navigation ul li a {
   right: -100px;
   top: 395px;
   opacity: 0;
-  -webkit-animation: mymove2 0.7s ease-in 1.1s;
-          animation: mymove2 0.7s ease-in 1.1s;
+  -webkit-animation: mymove2 1s linear 1.5s;
+          animation: mymove2 1s linear 1.5s;
 }
 
 .banner .circles .info.info2.animation2 {
@@ -318,8 +318,8 @@ header .navigation ul li a {
   right: -100px;
   top: 395px;
   opacity: 0;
-  -webkit-animation: mymove3 0.5s ease-in 2s;
-          animation: mymove3 0.5s ease-in 2s;
+  -webkit-animation: mymove3 0.7s linear 2.5s;
+          animation: mymove3 0.7s linear 2.5s;
 }
 
 .banner .circles .info.info3.animation3 {
