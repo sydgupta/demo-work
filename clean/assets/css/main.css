@@ -520,6 +520,13 @@ header .navigation ul li a {
   border: 1px dashed #555;
   border-radius: 100%;
   padding: 40px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 0 #7d1399;
+          box-shadow: 0 0 0 0 #7d1399;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pulse 2s infinite 1s;
+          animation: pulse 2s infinite 1s;
 }
 
 .all-round-protection .content .circles .circle1 .circle2 {
@@ -528,6 +535,13 @@ header .navigation ul li a {
   padding: 40px;
   width: 320px;
   height: 320px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 0 #7d1399;
+          box-shadow: 0 0 0 0 #7d1399;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pulse 2s infinite 0.5s;
+          animation: pulse 2s infinite 0.5s;
 }
 
 .all-round-protection .content .circles .circle1 .circle3 {
@@ -535,6 +549,13 @@ header .navigation ul li a {
   border-radius: 100%;
   width: 260px;
   height: 260px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 0 #7d1399;
+          box-shadow: 0 0 0 0 #7d1399;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
 }
 
 .other-features {
@@ -1605,6 +1626,48 @@ footer .copyright .newsletter form button {
     right: -278px;
     top: 235px;
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(125, 19, 153, 0.7);
+            box-shadow: 0 0 0 0 rgba(125, 19, 153, 0.7);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 25px rgba(125, 19, 153, 0);
+            box-shadow: 0 0 0 25px rgba(125, 19, 153, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(125, 19, 153, 0);
+            box-shadow: 0 0 0 0 rgba(125, 19, 153, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(125, 19, 153, 0.7);
+            box-shadow: 0 0 0 0 rgba(125, 19, 153, 0.7);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 25px rgba(125, 19, 153, 0);
+            box-shadow: 0 0 0 25px rgba(125, 19, 153, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(125, 19, 153, 0);
+            box-shadow: 0 0 0 0 rgba(125, 19, 153, 0);
   }
 }
 /*# sourceMappingURL=main.css.map */
